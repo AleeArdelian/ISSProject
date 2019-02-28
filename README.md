@@ -2,8 +2,8 @@
 
 #### Team Details
 
-  Members: Alexandra Ardelian
-           Diana Achim
-           Cristina Braga
-           Catalin Belcianu
+  Members: * Alexandra Ardelian (TL)
+           *Diana Achim
+           *Cristina Braga
+           *Catalin Belcianu
            Alexandru Balea
