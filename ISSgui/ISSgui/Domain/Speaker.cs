@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace ISSgui.Domain
 {
-    class Speaker
+    class Speaker : Author
     {
+        public Speaker(long CNP, string affiliation, string username, string password, string firstName, string lastName, string email) : base(CNP, affiliation, username, password, firstName, lastName, email)
+        {
+        }
     }
 }
