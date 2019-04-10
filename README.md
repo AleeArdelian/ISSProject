@@ -1,10 +1,10 @@
 
 #### Team Details
 
-	Members: * Alexandra Ardelian (TL)
+	Members: * Alexandra Ardelian
 		 * Diana Achim
 		 * Cristina Braga
 		 * Catalin Belcianu
-		 * Alexandru Balea
+		 * Alexandru Balea  (TL)
 	Group: 921/1
 	
