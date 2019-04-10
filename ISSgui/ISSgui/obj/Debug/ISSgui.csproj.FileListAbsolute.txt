@@ -1,0 +1,12 @@
+C:\Users\Catalin\source\repos\ISSgui\ISSgui\bin\Debug\ISSgui.exe.config
+C:\Users\Catalin\source\repos\ISSgui\ISSgui\bin\Debug\ISSgui.exe
+C:\Users\Catalin\source\repos\ISSgui\ISSgui\bin\Debug\ISSgui.pdb
+C:\Users\Catalin\source\repos\ISSgui\ISSgui\obj\Debug\ISSgui.csprojAssemblyReference.cache
+C:\Users\Catalin\source\repos\ISSgui\ISSgui\obj\Debug\ISSgui.Form1.resources
+C:\Users\Catalin\source\repos\ISSgui\ISSgui\obj\Debug\ISSgui.Form2.resources
+C:\Users\Catalin\source\repos\ISSgui\ISSgui\obj\Debug\ISSgui.Form3.resources
+C:\Users\Catalin\source\repos\ISSgui\ISSgui\obj\Debug\ISSgui.Properties.Resources.resources
+C:\Users\Catalin\source\repos\ISSgui\ISSgui\obj\Debug\ISSgui.csproj.GenerateResource.cache
+C:\Users\Catalin\source\repos\ISSgui\ISSgui\obj\Debug\ISSgui.csproj.CoreCompileInputs.cache
+C:\Users\Catalin\source\repos\ISSgui\ISSgui\obj\Debug\ISSgui.exe
+C:\Users\Catalin\source\repos\ISSgui\ISSgui\obj\Debug\ISSgui.pdb
