@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="Domain\Chair.cs" />
     <Compile Include="Domain\ISwitchToAuthor.cs" />
     <Compile Include="Domain\RegularMember.cs" />
@@ -56,6 +57,11 @@
     <Compile Include="Domain\Author.cs" />
     <Compile Include="Domain\Participant.cs" />
     <Compile Include="Domain\Speaker.cs" />
+=======
+    <Compile Include="Domain\ISwitchToAuthor.cs" />
+    <Compile Include="Domain\Listener.cs" />
+    <Compile Include="Domain\Participant.cs" />
+>>>>>>> feature/Domain/Listener
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
