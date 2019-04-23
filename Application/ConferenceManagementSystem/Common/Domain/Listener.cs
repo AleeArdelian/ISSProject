@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace ISSgui.Domain
 {
-    class Listener
+    public class Listener
     {
-        private long cNP;
+        private string cNP;
 
-        public long CNP { get => cNP; set => cNP = value; }
+        public string CNP { get => cNP; set => cNP = value; }
     }
 }
