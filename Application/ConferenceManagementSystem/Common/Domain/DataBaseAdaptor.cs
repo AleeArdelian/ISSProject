@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ISSgui.Domain
 {
-    class DataBaseAdaptor
+    public class DataBaseAdaptor
     {
         private String conStr;
         private SqlConnection dbCon;

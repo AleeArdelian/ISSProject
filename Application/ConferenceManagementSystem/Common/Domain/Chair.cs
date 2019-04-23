@@ -5,6 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ISSgui.Domain {
-    class Chair: PcMember {
+    public class Chair: PcMember {
     }
 }

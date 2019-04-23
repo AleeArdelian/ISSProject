@@ -5,29 +5,29 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ISSgui.Domain {
-    class PcMember {
-        private String cnp;
-        private String affiliation;
-        private String website;
+    public class PcMember {
+        private String CNP;
+        private String Affiliation;
+        private String Website;
 
         public String getCnp() {
-            return cnp;
+            return CNP;
         }
 
         public String getAffiliation() {
-            return affiliation;
+            return Affiliation;
         }
 
         public String getWebsite() {
-            return website;
+            return Website;
         }
 
         public void setAffiliation(String affiliation) {
-            this.affiliation = affiliation;
+            this.Affiliation = affiliation;
         }
 
         public void setWebsite(String website) {
-            this.website = website;
+            this.Website = website;
         }
 
         public void bid() {

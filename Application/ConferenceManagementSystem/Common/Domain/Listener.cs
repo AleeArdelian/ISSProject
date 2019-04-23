@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ISSgui.Domain
 {
-    class Listener
+    public class Listener
     {
         private long cNP;
 

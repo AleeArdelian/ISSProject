@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ISSgui.Domain {
-    class Reviewer: PcMember {
+    public class Reviewer: PcMember {
 
         public void reviewPaper() {
 

@@ -9,12 +9,12 @@ namespace ISSgui.Domain
     public class Author:Participant
     {
         private long CNP;
-        private string affiliaton;
+        private string Affiliaton;
 
         public Author(long CNP, string affiliation, string username, string password, string firstName, string lastName, string email)
         {
             this.CNP = CNP;
-            this.affiliaton = affiliation;
+            this.Affiliaton = affiliation;
             this.setEmail(email);
             this.setFirstName(firstName);
             this.setLastName(lastName);
@@ -23,9 +23,9 @@ namespace ISSgui.Domain
         }
 
         public long getCNP() { return CNP; }
-        public string getAffiliation() { return affiliaton; }
+        public string getAffiliation() { return Affiliaton; }
         public void setCNP(long CNP) { this.CNP = CNP; }
-        public void setAffiliation(string affiliation) { this.affiliaton = affiliation; }
+        public void setAffiliation(string affiliation) { this.Affiliaton = affiliation; }
 
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ISSgui.Domain
 {
-    interface ISwitchToAuthor
+    public interface ISwitchToAuthor
     {
         void SwitchToAuthor();
     }
