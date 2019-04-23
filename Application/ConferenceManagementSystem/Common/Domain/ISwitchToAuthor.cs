@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ISSgui.Domain
+namespace Common.Domain
 {
-    interface ISwitchToAuthor
+    public interface ISwitchToAuthor
     {
         void SwitchToAuthor();
     }

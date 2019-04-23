@@ -45,13 +45,29 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\AuthorRepository.cs" />
+    <Compile Include="Repository\ChairRepository.cs" />
+    <Compile Include="Repository\CoChairRepository.cs" />
+    <Compile Include="Repository\DataBaseAdaptorRepository.cs" />
     <Compile Include="Repository\IRepository.cs" />
+    <Compile Include="Repository\ListenerRepository.cs" />
+    <Compile Include="Repository\ParticipantRepository.cs" />
+    <Compile Include="Repository\PcMemberRepository.cs" />
+    <Compile Include="Repository\RegularMemberRepository.cs" />
+    <Compile Include="Repository\ReviewerRepository.cs" />
+    <Compile Include="Repository\SpeakerRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controller\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{1a960f3b-3f6d-4cc6-95bc-7d42d1eb527a}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

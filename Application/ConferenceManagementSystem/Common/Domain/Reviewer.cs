@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ISSgui.Domain {
-    class Reviewer: PcMember {
+namespace Common.Domain {
+    public class Reviewer: PcMember {
 
         public void reviewPaper() {
 

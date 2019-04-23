@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ISSgui.Domain {
-    class PcMember {
+namespace Common.Domain {
+    public class PcMember {
         private String cnp;
         private String affiliation;
         private String website;

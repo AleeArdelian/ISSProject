@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ISSgui.Domain {
-    class CoChair: Chair {
+namespace Common.Domain {
+    public class CoChair: Chair {
     }
 }

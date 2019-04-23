@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ISSgui.Domain {
-    class RegularMember {
+namespace Common.Domain {
+    public class RegularMember {
     }
 }
