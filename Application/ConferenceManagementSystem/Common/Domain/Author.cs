@@ -8,10 +8,10 @@ namespace Common.Domain
 {
     public class Author:Participant
     {
-        private long CNP;
+        private string CNP;
         private string Affiliaton;
 
-        public Author(long CNP, string affiliation, string username, string password, string firstName, string lastName, string email)
+        public Author(string CNP, string affiliation, string username, string password, string firstName, string lastName, string email)
         {
             this.CNP = CNP;
             this.Affiliaton = affiliation;
@@ -22,9 +22,9 @@ namespace Common.Domain
             this.setUsername(username);
         }
 
-        public long getCNP() { return CNP; }
+        public string getCNP() { return CNP; }
         public string getAffiliation() { return Affiliaton; }
-        public void setCNP(long CNP) { this.CNP = CNP; }
+        public void setCNP(string CNP) { this.CNP = CNP; }
         public void setAffiliation(string affiliation) { this.Affiliaton = affiliation; }
 
     }

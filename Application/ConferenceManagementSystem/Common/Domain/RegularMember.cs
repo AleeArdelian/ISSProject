@@ -6,6 +6,6 @@ using System.Threading.Tasks;
 
 namespace Common.Domain {
 
-    public class RegularMember {
+    public class RegularMember: PcMember {
     }
 }

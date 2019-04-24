@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Common.Domain {
-    public class PcMember {
+    public class PcMember: Participant {
         private String CNP;
         private String Affiliation;
         private String Website;
