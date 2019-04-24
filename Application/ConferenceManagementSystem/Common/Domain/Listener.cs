@@ -4,12 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ISSgui.Domain
+namespace Common.Domain
 {
     public class Listener
     {
         private long cNP;
-
         public long CNP { get => cNP; set => cNP = value; }
     }
 }
