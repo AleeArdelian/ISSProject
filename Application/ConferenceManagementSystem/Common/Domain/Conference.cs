@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 
 namespace Common.Domain
 {
-    public class Listener: Participant
+    public class Conference
     {
-        private string cNP;
-        public string CNP { get => cNP; set => cNP = value; }
     }
 }

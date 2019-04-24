@@ -1,6 +1,9 @@
-﻿using System;
+﻿using Common.Service;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Channels;
+using System.Runtime.Remoting.Channels.Tcp;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -14,6 +17,13 @@ namespace ISSgui
         [STAThread]
         static void Main()
         {
+            TcpChannel chan = new TcpChannel();
+            ChannelServices.RegisterChannel(chan, false);
+            IService obj = (IService)Activator.GetObject(
+                     typeof(IService),
+                     "tcp://localhost:8888/cmsservice"
+            );
+            obj.FindAllListeners();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());

@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Remoting" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -48,7 +49,7 @@
     <Compile Include="Repository\AuthorRepository.cs" />
     <Compile Include="Repository\ChairRepository.cs" />
     <Compile Include="Repository\CoChairRepository.cs" />
-    <Compile Include="Repository\DataBaseAdaptorRepository.cs" />
+    <Compile Include="Repository\ConferenceRepository.cs" />
     <Compile Include="Repository\IRepository.cs" />
     <Compile Include="Repository\ListenerRepository.cs" />
     <Compile Include="Repository\ParticipantRepository.cs" />
@@ -56,13 +57,12 @@
     <Compile Include="Repository\RegularMemberRepository.cs" />
     <Compile Include="Repository\ReviewerRepository.cs" />
     <Compile Include="Repository\SpeakerRepository.cs" />
+    <Compile Include="Service\CMSService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controller\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Common\Common.csproj">
       <Project>{1a960f3b-3f6d-4cc6-95bc-7d42d1eb527a}</Project>

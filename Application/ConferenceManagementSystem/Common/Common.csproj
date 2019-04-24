@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{1A960F3B-3F6D-4CC6-95BC-7D42D1EB527A}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>Library</OutputType>
     <RootNamespace>Common</RootNamespace>
     <AssemblyName>Common</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
@@ -39,7 +42,7 @@
     <Compile Include="Domain\Author.cs" />
     <Compile Include="Domain\Chair.cs" />
     <Compile Include="Domain\CoChair.cs" />
-    <Compile Include="Domain\DataBaseAdaptor.cs" />
+    <Compile Include="Domain\Conference.cs" />
     <Compile Include="Domain\ISwitchToAuthor.cs" />
     <Compile Include="Domain\Listener.cs" />
     <Compile Include="Domain\Participant.cs" />
@@ -47,6 +50,7 @@
     <Compile Include="Domain\RegularMember.cs" />
     <Compile Include="Domain\Reviewer.cs" />
     <Compile Include="Domain\Speaker.cs" />
+    <Compile Include="Service\IService.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
