@@ -19,7 +19,7 @@ namespace Server.Repository
             throw new NotImplementedException();
         }
 
-        public bool FindOne(Speaker entity)
+        public Speaker FindOne(Speaker entity)
         {
             throw new NotImplementedException();
         }

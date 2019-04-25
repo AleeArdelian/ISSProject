@@ -15,34 +15,43 @@ namespace Server.Repository
     {
         public void Add(Conference entity)
         {
-            using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["constr"].ConnectionString))
+            using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["cmsDatabase"].ConnectionString))
             {
-                string query = "insert into Conferences(ConferenceName) values (@ConferenceName)";
+                string query = "INSERT INTO Conferences(ConferenceName) VALUES (@ConferenceName)";
                 db.Execute(query, entity);
             }
         }
 
         public List<Conference> FindAll()
         {
-            using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["constr"].ConnectionString))
+            using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["cmsDatabase"].ConnectionString))
             {
-                return db.Query<Conference>("select * from Conferences").ToList();
+                return db.Query<Conference>("SELECT * FROM Conferences").ToList();
             }
         }
 
-        public bool FindOne(Conference entity)
+        public Conference FindOne(Conference entity)
         {
-            throw new NotImplementedException();
+            using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["cmsDatabase"].ConnectionString))
+            {
+                return db.Query<Conference>("SELECT * FROM Conferences WHERE ConferenceId = @ConferenceId", entity).SingleOrDefault();
+            }
         }
 
         public void Remove(Conference entity)
         {
-            throw new NotImplementedException();
+            using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["cmsDatabase"].ConnectionString))
+            {
+                db.Execute("DELETE * FROM Conferences WHERE ConferenceId = @ConferenceId", entity);
+            }
         }
 
         public void Update(Conference entity)
         {
-            throw new NotImplementedException();
+            using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["cmsDatabase"].ConnectionString))
+            {
+                db.Execute("UPDATE Conferences SET ConferenceName = @ConferenceName WHERE ConferenceId = @ConferenceId", entity);
+            }
         }
     }
 }

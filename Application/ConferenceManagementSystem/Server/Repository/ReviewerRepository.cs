@@ -19,7 +19,7 @@ namespace Server.Repository
             throw new NotImplementedException();
         }
 
-        public bool FindOne(Reviewer entity)
+        public Reviewer FindOne(Reviewer entity)
         {
             throw new NotImplementedException();
         }
