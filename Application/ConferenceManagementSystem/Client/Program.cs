@@ -23,7 +23,7 @@ namespace ISSgui
                      typeof(IService),
                      "tcp://localhost:8888/cmsservice"
             );
-            obj.FindAllListeners();
+            //obj.FindAllListeners();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
