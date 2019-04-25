@@ -8,5 +8,13 @@ namespace Common.Domain
 {
     public class Conference
     {
+        public string ConferenceID { get; set; }
+        public string ConferenceName { get; set; }
+
+        public Conference(string ConferenceID, string ConferenceName)
+        {
+            this.ConferenceID = ConferenceID;
+            this.ConferenceName = ConferenceName;
+        }
     }
 }
