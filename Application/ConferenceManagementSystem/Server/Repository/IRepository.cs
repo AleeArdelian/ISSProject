@@ -12,6 +12,6 @@ namespace Server.Repository
         void Remove(T entity);
         void Update(T entity);
         List<T> FindAll();
-        bool FindOne(T entity);
+        T FindOne(T entity);
     }
 }

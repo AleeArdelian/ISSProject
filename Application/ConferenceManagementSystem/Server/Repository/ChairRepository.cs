@@ -19,7 +19,7 @@ namespace Server.Repository
             throw new NotImplementedException();
         }
 
-        public bool FindOne(Chair entity)
+        public Chair FindOne(Chair entity)
         {
             throw new NotImplementedException();
         }

@@ -19,7 +19,7 @@ namespace Server.Repository
             throw new NotImplementedException();
         }
 
-        public bool FindOne(PcMember entity)
+        public PcMember FindOne(PcMember entity)
         {
             throw new NotImplementedException();
         }

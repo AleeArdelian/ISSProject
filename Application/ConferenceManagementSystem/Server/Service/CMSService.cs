@@ -1,5 +1,6 @@
 ﻿using Common.Domain;
 using Common.Service;
+using Server.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,18 @@ namespace Server.Service
 {
     class CMSService : MarshalByRefObject, IService
     {
+        ConferenceRepository confRepo = new ConferenceRepository();
+
+        public void AddConference(int ConferenceId, string ConferenceName)
+        {
+            confRepo.Add(new Conference(ConferenceId, ConferenceName));
+        }
+
+        public Conference GetConferences()
+        {
+            return confRepo.FindOne(new Conference(2, "asd"));
+        }
+
         public void AddAuthor(long CNP, string affiliation)
         {
             throw new NotImplementedException();

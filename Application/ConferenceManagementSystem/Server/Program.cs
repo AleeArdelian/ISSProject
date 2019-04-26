@@ -7,6 +7,7 @@ using System.Runtime.Remoting;
 using System.Runtime.Remoting.Channels.Tcp;
 using System.Runtime.Remoting.Channels;
 using Server.Service;
+using Common.Service;
 
 namespace Server
 {
@@ -16,10 +17,10 @@ namespace Server
         {
             TcpChannel channel = new TcpChannel(8888);
             ChannelServices.RegisterChannel(channel, false);
-            RemotingConfiguration.RegisterWellKnownServiceType(
-                typeof(CMSService), "cmsservice",
-                WellKnownObjectMode.SingleCall
-            );
+    
+            CMSService service = new CMSService();
+            RemotingServices.Marshal(service, "cmsservice");
+
             Console.WriteLine("[SERVER] Started...");
             String choice;
             bool running = true;
@@ -32,6 +33,14 @@ namespace Server
                 choice = Console.ReadLine();
                 if (choice == "0")
                     running = false;
+                else if (choice == "1")
+                {
+                    service.AddConference(12, "MyConference");
+                }
+                else if (choice == "2")
+                {
+                    Console.WriteLine(service.GetConferences().ConferenceName);
+                }
             }
             Console.WriteLine("[SERVER] Shuting down...");
         }
