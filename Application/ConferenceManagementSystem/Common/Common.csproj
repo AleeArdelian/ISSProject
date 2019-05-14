@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="Domain\Author.cs" />
     <Compile Include="Domain\Chair.cs" />
+    <Compile Include="Domain\ChosenPCMember.cs" />
     <Compile Include="Domain\CoChair.cs" />
     <Compile Include="Domain\Conference.cs" />
     <Compile Include="Domain\ISwitchToAuthor.cs" />
