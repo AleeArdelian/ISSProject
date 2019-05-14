@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Common.Service;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,12 +9,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ISSgui
+namespace Client
 {
-    public partial class Form3 : Form
+    public partial class MainWindow : Form
     {
-        public Form3()
+        private IService service;
+
+        public MainWindow(IService service)
         {
+            this.service = service;
             InitializeComponent();
         }
     }

@@ -1,6 +1,6 @@
-﻿namespace ISSgui
+﻿namespace Client
 {
-    partial class Form3
+    partial class MainWindow
     {
         /// <summary>
         /// Required designer variable.

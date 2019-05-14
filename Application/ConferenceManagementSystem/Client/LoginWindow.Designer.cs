@@ -1,4 +1,4 @@
-﻿namespace ISSgui
+﻿namespace Client
 {
     partial class LoginWindow
     {

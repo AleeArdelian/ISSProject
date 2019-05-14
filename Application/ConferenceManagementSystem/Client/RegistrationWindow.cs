@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Common.Service;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,17 +9,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ISSgui
+namespace Client
 {
     public partial class RegistrationWindow : Form
     {
-        public RegistrationWindow()
+        private IService service;
+
+        public RegistrationWindow(IService service)
         {
+            this.service = service;
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void registerButton_Click(object sender, EventArgs e)
         {
+            
             MessageBox.Show("register successful");
             this.Close();
         }

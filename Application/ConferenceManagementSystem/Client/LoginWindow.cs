@@ -11,11 +11,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ISSgui
+namespace Client
 {
     public partial class LoginWindow : Form
     {
-        private IService service = null;
+        private IService service;
 
         public LoginWindow(IService service)
         {
@@ -25,18 +25,25 @@ namespace ISSgui
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-            
-            this.Hide();
-            Form3 nf = new Form3();
-            nf.ShowDialog();
-            this.Show();
+            bool areCredentialsCorrect = service.login(usernameTextBox.Text, passwordTextBox.Text);
+            if (areCredentialsCorrect)
+            {
+                this.Hide();
+                MainWindow mainWindow = new MainWindow(this.service);
+                mainWindow.ShowDialog();
+                this.Show();
+            }
+            else
+            {
+                MessageBox.Show("Incorrect username or password. Try again.", "Warning", MessageBoxButtons.OK);
+            }
         }
 
         private void registerButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            RegistrationWindow nf = new RegistrationWindow();
-            nf.ShowDialog();
+            RegistrationWindow regWindow = new RegistrationWindow(this.service);
+            regWindow.ShowDialog();
             this.Show();
         }
     }

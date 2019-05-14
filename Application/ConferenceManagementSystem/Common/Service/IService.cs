@@ -10,6 +10,7 @@ namespace Common.Service
     public interface IService
     {
         bool login(string name, string password);
+        bool register(string firstName, string lastName, string CNP, string email, string username, string password);
         void AddListener(string CNP);
         void AddAuthor(long CNP, string affiliation);
         void AddParticipant(string Username, string Password, string FirstName, string LastName, string Email);
