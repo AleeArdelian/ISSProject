@@ -50,7 +50,17 @@
     <Compile Include="Domain\RegularMember.cs" />
     <Compile Include="Domain\Reviewer.cs" />
     <Compile Include="Domain\Speaker.cs" />
+    <Compile Include="Domain\Validators\AuthorValidator.cs" />
+    <Compile Include="Domain\Validators\IValidator.cs" />
+    <Compile Include="Domain\Validators\ListenerValidator.cs" />
+    <Compile Include="Domain\Validators\ParticipantValidator.cs" />
+    <Compile Include="Domain\Validators\PcMemberValidator.cs" />
+    <Compile Include="Domain\Validators\SpeakerValidator.cs" />
+    <Compile Include="Domain\Validators\ValidatorException.cs" />
     <Compile Include="Service\IService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
