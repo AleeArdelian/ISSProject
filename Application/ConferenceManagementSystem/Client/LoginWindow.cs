@@ -1,4 +1,5 @@
 ﻿using Common.Domain;
+using Common.Service;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,26 +13,29 @@ using System.Windows.Forms;
 
 namespace ISSgui
 {
-    public partial class Form1 : Form
+    public partial class LoginWindow : Form
     {
+        private IService service = null;
 
-        public Form1()
+        public LoginWindow(IService service)
         {
+            this.service = service;
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void loginButton_Click(object sender, EventArgs e)
         {
+            
             this.Hide();
             Form3 nf = new Form3();
             nf.ShowDialog();
             this.Show();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void registerButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form2 nf = new Form2();
+            RegistrationWindow nf = new RegistrationWindow();
             nf.ShowDialog();
             this.Show();
         }

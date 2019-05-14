@@ -9,8 +9,7 @@ namespace Common.Service
 {
     public interface IService
     {
-        void Login(string Nume, string Parola);
-
+        bool login(string name, string password);
         void AddListener(string CNP);
         void AddAuthor(long CNP, string affiliation);
         void AddParticipant(string Username, string Password, string FirstName, string LastName, string Email);

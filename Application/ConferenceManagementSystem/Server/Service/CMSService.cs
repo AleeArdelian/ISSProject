@@ -53,8 +53,10 @@ namespace Server.Service
             throw new NotImplementedException();
         }
 
-        public void Login(string Nume, string Parola)
+        public bool login(string name, string password)
         {
+            // check if credentials are in the database
+            // return true if there are, false otherwise
             throw new NotImplementedException();
         }
 

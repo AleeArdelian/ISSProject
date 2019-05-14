@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ISSgui
 {
-    public partial class Form2 : Form
+    public partial class RegistrationWindow : Form
     {
-        public Form2()
+        public RegistrationWindow()
         {
             InitializeComponent();
         }

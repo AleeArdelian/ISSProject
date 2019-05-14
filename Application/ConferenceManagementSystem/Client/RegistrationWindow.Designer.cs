@@ -1,6 +1,6 @@
 ﻿namespace ISSgui
 {
-    partial class Form2
+    partial class RegistrationWindow
     {
         /// <summary>
         /// Required designer variable.
