@@ -7,7 +7,7 @@ using System.Runtime.Remoting.Channels.Tcp;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ISSgui
+namespace Client
 {
     static class Program
     {

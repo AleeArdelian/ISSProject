@@ -60,7 +60,7 @@ namespace Server.Service
         {
             // check if credentials are in the database
             // return true if there are, false otherwise
-            throw new NotImplementedException();
+            return false;
         }
 
         public void UpdateAuthor(long CNP, string affiliation)
