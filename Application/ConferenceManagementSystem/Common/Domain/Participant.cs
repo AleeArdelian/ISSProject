@@ -8,11 +8,13 @@ namespace Common.Domain
 {
     public abstract class Participant
     {
-        private string Username;
-        private string Passwd;
-        private string FirstName;
-        private string LastName;
-        private string Email;
+
+        public String FirstName { get; set; }
+        public String LastName { get; set; }
+        public String Email { get; set; }
+        public String Username { get; set; }
+        public String Passwd { get; set; }
+
 
         public string getUsername() { return Username; }
         public string getPassword() { return Passwd; }
@@ -24,5 +26,6 @@ namespace Common.Domain
         public void setFirstName(string firstName) { this.FirstName = firstName; }
         public void setLastName(string lastName) { this.LastName = lastName; }
         public void setEmail(string email) { this.Email = email; }
+        
     }
 }

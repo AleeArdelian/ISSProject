@@ -6,10 +6,18 @@ using System.Threading.Tasks;
 
 namespace Common.Domain {
     public class PcMember: Participant {
-        private String CNP;
-        private String Affiliation;
-        private String Website;
+        public String CNP { get; set; }
+        public String Affiliation { get; set; }
+        public String Website { get; set; }
 
+        /*public PcMember(String CNP, String Affiliation, String Website)
+        {
+            this.CNP = CNP;
+            this.Affiliation = Affiliation;
+            this.Website = Website;
+        }*/
+
+            
         public String getCnp() {
             return CNP;
         }
@@ -30,7 +38,13 @@ namespace Common.Domain {
             this.Website = website;
         }
 
+        public void setCNP(String CNP)
+        {
+            this.CNP = CNP;
+        }
+
         public void bid() {
         }
+        
     }
 }

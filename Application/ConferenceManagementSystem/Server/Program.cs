@@ -28,6 +28,7 @@ namespace Server
             {
                 Console.WriteLine("\n1. Add a conference");
                 Console.WriteLine("\n2. See the conferences");
+                Console.WriteLine("\n3. Add regular member");
                 Console.WriteLine("0. Exit");
                 Console.Write("\nserver#: ");
                 choice = Console.ReadLine();
@@ -40,6 +41,10 @@ namespace Server
                 else if (choice == "2")
                 {
                     Console.WriteLine(service.GetConferences().ConferenceName);
+                }
+                else if (choice == "3")
+                {
+                    service.AddRegularMember("1234567654321", "SomeAffiliation", "https://somewebsite.ro", "TestName", "TestName", "someemail@something.com", "someuser", "somepasswd");
                 }
             }
             Console.WriteLine("[SERVER] Shuting down...");

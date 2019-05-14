@@ -12,6 +12,7 @@ namespace Server.Service
     class CMSService : MarshalByRefObject, IService
     {
         ConferenceRepository confRepo = new ConferenceRepository();
+        RegularMemberRepository rmRepo = new RegularMemberRepository();
 
         public void AddConference(int ConferenceId, string ConferenceName)
         {
@@ -38,9 +39,11 @@ namespace Server.Service
             throw new NotImplementedException();
         }
 
-        public void AddPcMember(string CNP, string Affiliation, string Website)
+        public void AddRegularMember(string CNP, string Affiliation, string Website, string FirstName, string LastName, string email, string Username, string Password)
         {
-            throw new NotImplementedException();
+            RegularMember rm = new RegularMember(CNP, Affiliation, Website);
+            rm.setEmail(email); rm.setFirstName(FirstName); rm.setLastName(LastName); rm.setUsername(Username); rm.setPassword(Password);
+            rmRepo.Add(rm);
         }
 
         public void AddSpeaker(string CNP, string affiliation, string username, string password, string firstName, string lastName, string email)

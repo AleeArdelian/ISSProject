@@ -6,6 +6,15 @@ using System.Threading.Tasks;
 
 namespace Common.Domain {
 
-    public class RegularMember: PcMember {
+    public class RegularMember: PcMember
+    {
+        public String isReviewer { get; set; }
+
+        public RegularMember(String CNP, String Affiliation, String Website)
+        {
+            this.setCNP(CNP);
+            this.setAffiliation(Affiliation);
+            this.setWebsite(Website);
+        }
     }
 }

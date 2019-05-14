@@ -13,7 +13,8 @@ namespace Common.Service
         void AddListener(string CNP);
         void AddAuthor(long CNP, string affiliation);
         void AddParticipant(string Username, string Password, string FirstName, string LastName, string Email);
-        void AddPcMember(string CNP, string Affiliation, string Website);
+        void AddRegularMember(string CNP, string Affiliation, string Website, string FirstName, string LastName, string email, string Username, string Password);
+
         void AddSpeaker(string CNP, string affiliation, string username, string password, string firstName, string lastName, string email);
 
         //void RemoveListener()
