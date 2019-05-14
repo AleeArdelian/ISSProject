@@ -23,9 +23,11 @@ namespace Client
 
         private void registerButton_Click(object sender, EventArgs e)
         {
-            
+            service.register(firstNameTextBox.Text, lastNameTextBox.Text, cnpTextBox.Text, AffiliationTextBox.Text, WebsiteTextBox.Text, emailTextBox.Text, usernameTextBox.Text, passwordTextBox.Text);
             MessageBox.Show("register successful");
             this.Close();
         }
+
+        
     }
 }

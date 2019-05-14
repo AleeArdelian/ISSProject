@@ -53,6 +53,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\AuthorRepository.cs" />
     <Compile Include="Repository\ChairRepository.cs" />
+    <Compile Include="Repository\ChosenPCRepo.cs" />
     <Compile Include="Repository\CoChairRepository.cs" />
     <Compile Include="Repository\ConferenceRepository.cs" />
     <Compile Include="Repository\IRepository.cs" />

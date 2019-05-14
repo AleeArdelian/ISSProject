@@ -44,7 +44,7 @@ namespace Server
                 }
                 else if (choice == "3")
                 {
-                    service.AddRegularMember("1234567654321", "SomeAffiliation", "https://somewebsite.ro", "TestName", "TestName", "someemail@something.com", "someuser", "somepasswd");
+                    service.AddRegularMember("2345678765432", "SomeOtherAffiliation", "https://someotherwebsite.ro", "TestNamee", "TestNamee", "someotheremail@something.com", "someotheruser", "someotherpasswd");
                 }
             }
             Console.WriteLine("[SERVER] Shuting down...");

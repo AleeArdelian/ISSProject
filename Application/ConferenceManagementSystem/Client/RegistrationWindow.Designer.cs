@@ -43,6 +43,10 @@
             this.retypePasswordLabel = new System.Windows.Forms.Label();
             this.retypePasswordTextBox = new System.Windows.Forms.TextBox();
             this.passwordTextBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.WebsiteTextBox = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.AffiliationTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // firstNameTextBox
@@ -63,7 +67,7 @@
             // 
             // registerButton
             // 
-            this.registerButton.Location = new System.Drawing.Point(124, 307);
+            this.registerButton.Location = new System.Drawing.Point(124, 373);
             this.registerButton.Name = "registerButton";
             this.registerButton.Size = new System.Drawing.Size(75, 29);
             this.registerButton.TabIndex = 2;
@@ -106,7 +110,7 @@
             // emailLabel
             // 
             this.emailLabel.AutoSize = true;
-            this.emailLabel.Location = new System.Drawing.Point(19, 142);
+            this.emailLabel.Location = new System.Drawing.Point(19, 199);
             this.emailLabel.Name = "emailLabel";
             this.emailLabel.Size = new System.Drawing.Size(46, 17);
             this.emailLabel.TabIndex = 8;
@@ -114,7 +118,7 @@
             // 
             // emailTextBox
             // 
-            this.emailTextBox.Location = new System.Drawing.Point(142, 139);
+            this.emailTextBox.Location = new System.Drawing.Point(142, 196);
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Size = new System.Drawing.Size(192, 22);
             this.emailTextBox.TabIndex = 7;
@@ -122,7 +126,7 @@
             // usernameLabel
             // 
             this.usernameLabel.AutoSize = true;
-            this.usernameLabel.Location = new System.Drawing.Point(19, 181);
+            this.usernameLabel.Location = new System.Drawing.Point(19, 238);
             this.usernameLabel.Name = "usernameLabel";
             this.usernameLabel.Size = new System.Drawing.Size(77, 17);
             this.usernameLabel.TabIndex = 10;
@@ -130,7 +134,7 @@
             // 
             // usernameTextBox
             // 
-            this.usernameTextBox.Location = new System.Drawing.Point(142, 178);
+            this.usernameTextBox.Location = new System.Drawing.Point(142, 235);
             this.usernameTextBox.Name = "usernameTextBox";
             this.usernameTextBox.Size = new System.Drawing.Size(192, 22);
             this.usernameTextBox.TabIndex = 9;
@@ -138,7 +142,7 @@
             // passwordLabel
             // 
             this.passwordLabel.AutoSize = true;
-            this.passwordLabel.Location = new System.Drawing.Point(19, 220);
+            this.passwordLabel.Location = new System.Drawing.Point(19, 277);
             this.passwordLabel.Name = "passwordLabel";
             this.passwordLabel.Size = new System.Drawing.Size(73, 17);
             this.passwordLabel.TabIndex = 10;
@@ -147,7 +151,7 @@
             // retypePasswordLabel
             // 
             this.retypePasswordLabel.AutoSize = true;
-            this.retypePasswordLabel.Location = new System.Drawing.Point(19, 259);
+            this.retypePasswordLabel.Location = new System.Drawing.Point(19, 316);
             this.retypePasswordLabel.Name = "retypePasswordLabel";
             this.retypePasswordLabel.Size = new System.Drawing.Size(117, 17);
             this.retypePasswordLabel.TabIndex = 12;
@@ -155,7 +159,7 @@
             // 
             // retypePasswordTextBox
             // 
-            this.retypePasswordTextBox.Location = new System.Drawing.Point(142, 256);
+            this.retypePasswordTextBox.Location = new System.Drawing.Point(142, 313);
             this.retypePasswordTextBox.Name = "retypePasswordTextBox";
             this.retypePasswordTextBox.PasswordChar = '*';
             this.retypePasswordTextBox.Size = new System.Drawing.Size(192, 22);
@@ -163,17 +167,53 @@
             // 
             // passwordTextBox
             // 
-            this.passwordTextBox.Location = new System.Drawing.Point(142, 217);
+            this.passwordTextBox.Location = new System.Drawing.Point(142, 274);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.PasswordChar = '*';
             this.passwordTextBox.Size = new System.Drawing.Size(192, 22);
             this.passwordTextBox.TabIndex = 9;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(19, 171);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(63, 17);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Website:";
+            // 
+            // WebsiteTextBox
+            // 
+            this.WebsiteTextBox.Location = new System.Drawing.Point(142, 166);
+            this.WebsiteTextBox.Name = "WebsiteTextBox";
+            this.WebsiteTextBox.Size = new System.Drawing.Size(192, 22);
+            this.WebsiteTextBox.TabIndex = 15;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(19, 134);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(69, 17);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "Affiliation:";
+            // 
+            // AffiliationTextBox
+            // 
+            this.AffiliationTextBox.Location = new System.Drawing.Point(142, 134);
+            this.AffiliationTextBox.Name = "AffiliationTextBox";
+            this.AffiliationTextBox.Size = new System.Drawing.Size(192, 22);
+            this.AffiliationTextBox.TabIndex = 13;
+            // 
             // RegistrationWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(369, 371);
+            this.ClientSize = new System.Drawing.Size(369, 449);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.WebsiteTextBox);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.AffiliationTextBox);
             this.Controls.Add(this.retypePasswordLabel);
             this.Controls.Add(this.retypePasswordTextBox);
             this.Controls.Add(this.passwordLabel);
@@ -213,5 +253,9 @@
         private System.Windows.Forms.Label retypePasswordLabel;
         private System.Windows.Forms.TextBox retypePasswordTextBox;
         private System.Windows.Forms.TextBox passwordTextBox;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox WebsiteTextBox;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox AffiliationTextBox;
     }
 }
