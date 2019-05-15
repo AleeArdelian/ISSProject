@@ -11,6 +11,7 @@ namespace Common.Service
     {
         bool login(string name, string password);
         bool register(string firstName, string lastName, string CNP, string affiliation, string website, string email, string username, string password);
+        bool validateRegister(string CNP, string username, string email);
         void AddListener(string CNP);
         void AddAuthor(long CNP, string affiliation);
         void AddParticipant(string Username, string Password, string FirstName, string LastName, string Email);

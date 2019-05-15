@@ -19,6 +19,11 @@ namespace Server.Repository
             throw new NotImplementedException();
         }
 
+        public List<string> FindCNPs()
+        {
+            throw new NotImplementedException();
+        }
+
         public Reviewer FindOne(Reviewer entity)
         {
             throw new NotImplementedException();

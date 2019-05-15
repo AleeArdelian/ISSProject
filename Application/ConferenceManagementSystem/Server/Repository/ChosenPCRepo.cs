@@ -26,6 +26,11 @@ namespace Server.Repository
             }
         }
 
+        public List<string> FindCNPs()
+        {
+            throw new NotImplementedException();
+        }
+
         public ChosenPCMember FindOne(ChosenPCMember entity)
         {
             throw new NotImplementedException();

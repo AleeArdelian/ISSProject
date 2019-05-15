@@ -30,6 +30,11 @@ namespace Server.Repository
             }
         }
 
+        public List<string> FindCNPs()
+        {
+            throw new NotImplementedException();
+        }
+
         public Conference FindOne(Conference entity)
         {
             using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["cmsDatabase"].ConnectionString))

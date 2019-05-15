@@ -28,6 +28,30 @@ namespace Server.Repository
             throw new NotImplementedException();
         }
 
+        public List<string> FindCNPs()
+        {
+            using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["cmsDatabase"].ConnectionString))
+            {
+                return db.Query<String>("SELECT CNP FROM RegularMembers").ToList();
+            }
+        }
+
+        public List<string> FindUsernames()
+        {
+            using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["cmsDatabase"].ConnectionString))
+            {
+                return db.Query<String>("SELECT Username FROM RegularMembers").ToList();
+            }
+        }
+
+        public List<string> FindEmails()
+        {
+            using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["cmsDatabase"].ConnectionString))
+            {
+                return db.Query<String>("SELECT Email FROM RegularMembers").ToList();
+            }
+        }
+
         public RegularMember FindOne(RegularMember entity)
         {
             throw new NotImplementedException();

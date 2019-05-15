@@ -13,7 +13,10 @@ namespace Server.Service
     {
         ConferenceRepository confRepo = new ConferenceRepository();
         RegularMemberRepository rmRepo = new RegularMemberRepository();
+        PcMemberRepository pcRepo = new PcMemberRepository();
         ChosenPCRepo cpcRepo = new ChosenPCRepo();
+        AuthorRepository athRepo = new AuthorRepository();
+        ListenerRepository lstRepo = new ListenerRepository();
 
         public void AddConference(int ConferenceId, string ConferenceName)
         {
@@ -91,8 +94,9 @@ namespace Server.Service
 
         public bool register(string firstName, string lastName, string CNP, string affiliation, string website, string email, string username, string password)
         {
+            if (!validateRegister(CNP, username, email)) return false;
             List<ChosenPCMember> allmemb = cpcRepo.FindAll();
-            String role="";
+            String role = "";
             bool ok = false;
             foreach (ChosenPCMember x in allmemb)
             {
@@ -110,12 +114,54 @@ namespace Server.Service
                     rm.setEmail(email); rm.setFirstName(firstName); rm.setLastName(lastName); rm.setUsername(username); rm.setPassword(password);
                     rmRepo.Add(rm);
                 }
+                else if (role.Equals("ChairMember"))
+                {
+                    PcMember pcm = new PcMember();
+                    pcm.setCNP(CNP); pcm.setAffiliation(affiliation); pcm.setWebsite(website); pcm.setEmail(email); pcm.setFirstName(firstName);
+                    pcm.setLastName(lastName); pcm.setUsername(username); pcm.setPassword(password);
+                    pcRepo.Add(pcm);
+                }
                 return ok;
             }
             else
             {
+                if (affiliation != "")
+                {
+                    Author ath = new Author(CNP, affiliation);
+                    ath.setEmail(email); ath.setFirstName(firstName); ath.setLastName(lastName); ath.setPassword(password); ath.setUsername(username);
+                    athRepo.Add(ath);
+                }
+                else
+                {
+                    Listener lst = new Listener(CNP);
+                    lst.setEmail(email); lst.setFirstName(firstName); lst.setLastName(lastName); lst.setPassword(password); lst.setUsername(username);
+                    lstRepo.Add(lst);
+                }
+
                 return !ok;
             }
+        }
+
+        public bool validateRegister(string CNP, string username, string email)
+        {
+            List<String> athcnp = athRepo.FindCNPs();
+            List<String> rmcnp = rmRepo.FindCNPs();
+            List<String> lstcnp = lstRepo.FindCNPs();
+            List<String> pcmcnp = pcRepo.FindCNPs();
+
+            if (athcnp.Contains(CNP) || rmcnp.Contains(CNP) || lstcnp.Contains(CNP) || pcmcnp.Contains(CNP)) { return false; }
+            athcnp = athRepo.FindUsernames();
+            rmcnp = rmRepo.FindUsernames();
+            lstcnp = lstRepo.FindUsernames();
+            pcmcnp = pcRepo.FindUsernames();
+            if (athcnp.Contains(username) || rmcnp.Contains(username) || lstcnp.Contains(username) || pcmcnp.Contains(username)) { return false; }
+            athcnp = athRepo.FindEmails();
+            rmcnp = rmRepo.FindEmails();
+            lstcnp = lstRepo.FindEmails();
+            pcmcnp = pcRepo.FindEmails();
+            if (athcnp.Contains(email) || rmcnp.Contains(email) || lstcnp.Contains(email) || pcmcnp.Contains(email)) { return false; }
+
+            return true;
         }
     }
 }
