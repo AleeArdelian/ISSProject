@@ -28,9 +28,9 @@ namespace Client
             string role = service.login(usernameTextBox.Text, passwordTextBox.Text);
             switch (role)
             {
-                default:
+                case "ChairMember":
                     this.Hide();
-                    MainWindow mainWindow = new MainWindow(this.service);
+                    ChairMainWindow mainWindow = new ChairMainWindow(this.service);
                     mainWindow.ShowDialog();
                     this.Show();
                     break;
