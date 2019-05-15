@@ -58,6 +58,7 @@
     <Compile Include="Repository\ConferenceRepository.cs" />
     <Compile Include="Repository\IRepository.cs" />
     <Compile Include="Repository\ListenerRepository.cs" />
+    <Compile Include="Repository\PaperRepository.cs" />
     <Compile Include="Repository\ParticipantRepository.cs" />
     <Compile Include="Repository\PcMemberRepository.cs" />
     <Compile Include="Repository\RegularMemberRepository.cs" />

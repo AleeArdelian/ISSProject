@@ -81,6 +81,15 @@ namespace Client
 
             int sid = Int32.Parse(sectionsDGV[0, srw].Value.ToString());
             int cid = Int32.Parse(conferencesDGV[0, crw].Value.ToString());
+
+            service.AddPaper(contentTextBox.Text, absTextBox.Text, paperNameTextBox.Text, topicTextBox.Text, sid);
+
+            SqlConnection dbCon = new SqlConnection(ConfigurationManager.ConnectionStrings["cmsDatabase"].ConnectionString);
+            SqlCommand cmd = new SqlCommand("INSERT INTO ConferenceAuthors(ConferenceID,AuthorCNP) VALUES(" + cid + "," + this.cnp + ")",dbCon);
+            dbCon.Open(); cmd.ExecuteNonQuery(); dbCon.Close();
+            int pid = service.FindMaxPaperID();
+            SqlCommand cmd1 = new SqlCommand("INSERT INTO AuthorPapers(AuthorCNP,PaperID) VALUES(" + this.cnp + "," + pid + ")", dbCon);
+            dbCon.Open(); cmd1.ExecuteNonQuery(); dbCon.Close();
         }
     }
 }

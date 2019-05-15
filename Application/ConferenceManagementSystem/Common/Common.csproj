@@ -46,6 +46,7 @@
     <Compile Include="Domain\Conference.cs" />
     <Compile Include="Domain\ISwitchToAuthor.cs" />
     <Compile Include="Domain\Listener.cs" />
+    <Compile Include="Domain\Paper.cs" />
     <Compile Include="Domain\Participant.cs" />
     <Compile Include="Domain\PcMember.cs" />
     <Compile Include="Domain\RegularMember.cs" />

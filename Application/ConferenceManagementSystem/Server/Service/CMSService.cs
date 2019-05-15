@@ -17,6 +17,7 @@ namespace Server.Service
         ChosenPCRepo cpcRepo = new ChosenPCRepo();
         AuthorRepository athRepo = new AuthorRepository();
         ListenerRepository lstRepo = new ListenerRepository();
+        PaperRepository pprRepo = new PaperRepository();
 
         public void AddConference(int ConferenceId, string ConferenceName)
         {
@@ -31,6 +32,17 @@ namespace Server.Service
         public void AddAuthor(long CNP, string affiliation)
         {
             throw new NotImplementedException();
+        }
+
+        public void AddPaper(String Content, String Abstract, String PaperName, String Topic, int SectionID)
+        {
+            Paper ppr = new Paper(); ppr.setContent(Content); ppr.setAbstract(Abstract); ppr.setPaperName(Abstract); ppr.setTopic(Topic);
+            pprRepo.Add(ppr, SectionID);
+        }
+
+        public int FindMaxPaperID()
+        {
+            return pprRepo.FindMaxID();
         }
 
         public void AddListener(string CNP)
