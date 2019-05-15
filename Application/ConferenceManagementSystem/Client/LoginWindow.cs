@@ -25,17 +25,18 @@ namespace Client
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-            bool areCredentialsCorrect = service.login(usernameTextBox.Text, passwordTextBox.Text);
-            if (areCredentialsCorrect)
+            string role = service.login(usernameTextBox.Text, passwordTextBox.Text);
+            switch (role)
             {
-                this.Hide();
-                MainWindow mainWindow = new MainWindow(this.service);
-                mainWindow.ShowDialog();
-                this.Show();
-            }
-            else
-            {
-                MessageBox.Show("Incorrect username or password. Try again.", "Warning", MessageBoxButtons.OK);
+                default:
+                    this.Hide();
+                    MainWindow mainWindow = new MainWindow(this.service);
+                    mainWindow.ShowDialog();
+                    this.Show();
+                    break;
+                case "FAILED":
+                    MessageBox.Show("Incorrect username or password. Try again.", "Warning", MessageBoxButtons.OK);
+                    break;
             }
         }
 
