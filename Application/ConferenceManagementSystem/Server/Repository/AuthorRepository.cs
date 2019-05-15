@@ -52,14 +52,13 @@ namespace Server.Repository
             }
         }
 
-        public bool hasUsernamePassword(string username, string password)
+        public List<String> hasUsernamePassword(string username, string password)
         {
             List<String> res;
             using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["cmsDatabase"].ConnectionString))
             {
                 res = db.Query<String>("SELECT CNP FROM Authors WHERE Username='" + username + "' AND Passwd='" + password+"'").ToList();
-                if (res.Capacity == 1) return true;
-                else return false;
+                return res;
             }
         }
 

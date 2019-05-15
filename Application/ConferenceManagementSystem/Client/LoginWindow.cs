@@ -25,8 +25,8 @@ namespace Client
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-            string role = service.login(usernameTextBox.Text, passwordTextBox.Text);
-            switch (role)
+            Tuple<String,String> mytuple = service.login(usernameTextBox.Text, passwordTextBox.Text);
+            switch (mytuple.Item2)
             {
                 default:
                     this.Hide();
