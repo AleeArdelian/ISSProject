@@ -52,6 +52,17 @@ namespace Server.Repository
             }
         }
 
+        public bool hasUsernamePassword(string username, string password)
+        {
+            List<String> res;
+            using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["cmsDatabase"].ConnectionString))
+            {
+                res = db.Query<String>("SELECT CNP FROM RegularMembers WHERE Username='" + username + "' AND Passwd='" + password + "'").ToList();
+                if (res.Capacity == 1) return true;
+                else return false;
+            }
+        }
+
         public RegularMember FindOne(RegularMember entity)
         {
             throw new NotImplementedException();

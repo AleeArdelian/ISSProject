@@ -62,8 +62,10 @@ namespace Server.Service
 
         public bool login(string name, string password)
         {
-            // check if credentials are in the database
-            // return true if there are, false otherwise
+            if(athRepo.hasUsernamePassword(name,password) || rmRepo.hasUsernamePassword(name, password) || pcRepo.hasUsernamePassword(name, password) || lstRepo.hasUsernamePassword(name, password))
+            {
+                return true;
+            }
             return false;
         }
 
