@@ -1,9 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Common.Domain;
+using Dapper;
 
 namespace Server.Repository
 {
@@ -11,12 +15,52 @@ namespace Server.Repository
     {
         public void Add(Author entity)
         {
-            throw new NotImplementedException();
+            using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["cmsDatabase"].ConnectionString))
+            {
+                string query = "INSERT INTO Authors(CNP,FirstName,LastName,Email,Affiliation,Username,Passwd)" +
+                    " VALUES (@CNP,@FirstName,@LastName,@Email,@Affiliation,@Username,@Passwd)";
+                db.Execute(query, entity);
+            }
         }
 
         public List<Author> FindAll()
         {
             throw new NotImplementedException();
+        }
+
+        public List<string> FindCNPs()
+        {
+            using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["cmsDatabase"].ConnectionString))
+            {
+                return db.Query<String>("SELECT CNP FROM Authors").ToList();
+            }
+        }
+
+        public List<string> FindUsernames()
+        {
+            using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["cmsDatabase"].ConnectionString))
+            {
+                return db.Query<String>("SELECT Username FROM Authors").ToList();
+            }
+        }
+
+        public List<string> FindEmails()
+        {
+            using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["cmsDatabase"].ConnectionString))
+            {
+                return db.Query<String>("SELECT Email FROM Authors").ToList();
+            }
+        }
+
+        public bool hasUsernamePassword(string username, string password)
+        {
+            List<String> res;
+            using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["cmsDatabase"].ConnectionString))
+            {
+                res = db.Query<String>("SELECT CNP FROM Authors WHERE Username='" + username + "' AND Passwd='" + password+"'").ToList();
+                if (res.Capacity == 1) return true;
+                else return false;
+            }
         }
 
         public Author FindOne(Author entity)

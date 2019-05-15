@@ -19,6 +19,11 @@ namespace Server.Repository
             throw new NotImplementedException();
         }
 
+        public List<string> FindCNPs()
+        {
+            throw new NotImplementedException();
+        }
+
         public CoChair FindOne(CoChair entity)
         {
             throw new NotImplementedException();

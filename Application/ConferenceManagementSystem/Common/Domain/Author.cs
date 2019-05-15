@@ -8,24 +8,19 @@ namespace Common.Domain
 {
     public class Author:Participant
     {
-        private string CNP;
-        private string Affiliaton;
+        public string CNP { get; set; }
+        public string Affiliation { get; set; }
 
-        public Author(string CNP, string affiliation, string username, string password, string firstName, string lastName, string email)
+        public Author(string CNP, string Affiliation)
         {
             this.CNP = CNP;
-            this.Affiliaton = affiliation;
-            this.setEmail(email);
-            this.setFirstName(firstName);
-            this.setLastName(lastName);
-            this.setPassword(password);
-            this.setUsername(username);
+            this.Affiliation = Affiliation;
         }
 
         public string getCNP() { return CNP; }
-        public string getAffiliation() { return Affiliaton; }
+        public string getAffiliation() { return Affiliation; }
         public void setCNP(string CNP) { this.CNP = CNP; }
-        public void setAffiliation(string affiliation) { this.Affiliaton = affiliation; }
+        public void setAffiliation(string affiliation) { this.Affiliation = affiliation; }
 
     }
 }

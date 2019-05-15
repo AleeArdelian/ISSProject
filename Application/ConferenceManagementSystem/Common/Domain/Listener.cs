@@ -8,7 +8,11 @@ namespace Common.Domain
 {
     public class Listener: Participant
     {
-        private string cNP;
-        public string CNP { get => cNP; set => cNP = value; }
+        public string CNP { get; set; }
+
+        public Listener(string CNP)
+        {
+            this.CNP = CNP;
+        }
     }
 }
