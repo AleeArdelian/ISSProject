@@ -85,9 +85,9 @@ namespace Server.Service
             return new Tuple<string, string>("FAILED","FAILED");
         }
 
-        public void UpdateAuthor(long CNP, string affiliation)
+        public void UpdateAuthor(string CNP, string firstName, string lastName)
         {
-            throw new NotImplementedException();
+            athRepo.Update(CNP, firstName, lastName);
         }
 
         public void UpdateListener(string CNP)

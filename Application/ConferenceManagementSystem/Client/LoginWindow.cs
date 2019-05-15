@@ -36,7 +36,7 @@ namespace Client
                     break;
                 case "Author":
                     this.Hide();
-                    AuthorMainWindow mainWindow1 = new AuthorMainWindow(this.service);
+                    AuthorMainWindow mainWindow1 = new AuthorMainWindow(this.service,mytuple.Item1);
                     mainWindow1.ShowDialog();
                     this.Show();
                     break;
