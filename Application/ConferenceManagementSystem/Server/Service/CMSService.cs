@@ -178,14 +178,6 @@ namespace Server.Service
             return true;
         }
 
-        bool IService.login(string name, string password)
-        {
-            throw new NotImplementedException();
-        }
-
-        string IService.validateRegister(string CNP, string username, string email)
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 }
