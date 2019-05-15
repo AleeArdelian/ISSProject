@@ -60,25 +60,29 @@ namespace Server.Service
             throw new NotImplementedException();
         }
 
-        public string login(string name, string password)
+        public Tuple<String,String> login(string name, string password)
         {
-            if(athRepo.hasUsernamePassword(name,password))
+            List<String> res=athRepo.hasUsernamePassword(name, password);
+            if (res.Capacity==1)
             {
-                return "Author";
+                return new Tuple<String, String>(res[0], "Author");
             }
-            else if(rmRepo.hasUsernamePassword(name, password))
+            res = rmRepo.hasUsernamePassword(name, password);
+            if (res.Capacity==1)
             {
-                return "RegularMember";
+                return new Tuple<String, String>(res[0], "RegularMember");
             }
-            else if(pcRepo.hasUsernamePassword(name, password))
+            res = pcRepo.hasUsernamePassword(name, password);
+            if (res.Capacity==1)
             {
-                return "ChairMember";
+                return new Tuple<String, String>(res[0], "ChairMember");
             }
-            else if(lstRepo.hasUsernamePassword(name, password))
+            res = lstRepo.hasUsernamePassword(name, password);
+            if (res.Capacity==1)
             {
-                return "Listener";
+                return new Tuple<String, String>(res[0], "Listener");
             }
-            return "FAILED";
+            return new Tuple<string, string>("FAILED","FAILED");
         }
 
         public void UpdateAuthor(long CNP, string affiliation)

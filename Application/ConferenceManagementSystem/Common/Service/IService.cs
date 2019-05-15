@@ -9,7 +9,7 @@ namespace Common.Service
 {
     public interface IService
     {
-        string login(string name, string password);
+        Tuple<String,String> login(string name, string password);
         bool register(string firstName, string lastName, string CNP, string affiliation, string website, string email, string username, string password);
         bool validateRegister(string CNP, string username, string email);
         void AddListener(string CNP);
