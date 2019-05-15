@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AuthorMainWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuthorMainWindow.Designer.cs">
+      <DependentUpon>AuthorMainWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,22 +65,25 @@
     <Compile Include="RegistrationWindow.Designer.cs">
       <DependentUpon>RegistrationWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainWindow.cs">
+    <Compile Include="ChairMainWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainWindow.Designer.cs">
-      <DependentUpon>MainWindow.cs</DependentUpon>
+    <Compile Include="ChairMainWindow.Designer.cs">
+      <DependentUpon>ChairMainWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AuthorMainWindow.resx">
+      <DependentUpon>AuthorMainWindow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginWindow.resx">
       <DependentUpon>LoginWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RegistrationWindow.resx">
       <DependentUpon>RegistrationWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainWindow.resx">
-      <DependentUpon>MainWindow.cs</DependentUpon>
+    <EmbeddedResource Include="ChairMainWindow.resx">
+      <DependentUpon>ChairMainWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -1,6 +1,6 @@
 ﻿namespace Client
 {
-    partial class MainWindow
+    partial class ChairMainWindow
     {
         /// <summary>
         /// Required designer variable.

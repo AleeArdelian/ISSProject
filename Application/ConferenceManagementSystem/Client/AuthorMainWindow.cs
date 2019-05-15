@@ -11,14 +11,16 @@ using System.Windows.Forms;
 
 namespace Client
 {
-    public partial class ChairMainWindow : Form
+    public partial class AuthorMainWindow : Form
     {
-        private IService service;
+        IService service;
 
-        public ChairMainWindow(IService service)
+        public AuthorMainWindow(IService service)
         {
             this.service = service;
             InitializeComponent();
         }
+
+
     }
 }
