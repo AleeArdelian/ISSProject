@@ -25,6 +25,7 @@ namespace Client
             InitializeComponent();
             cnpLabel.Text = cnp.ToString();
             populateDGVS();
+            panelUploadPaper.Visible = false;
         }
 
         private void btnUpdateInfo_Click(object sender, EventArgs e)
@@ -66,6 +67,20 @@ namespace Client
             dta.Fill(tbl);
             sectionsDGV.DataSource = tbl;
             sectionsDGV.Columns["SectionID"].Visible = false; sectionsDGV.Columns["SectionChairCNP"].Visible = false;
+        }
+
+        private void btnUpload_Click(object sender, EventArgs e)
+        {
+            panelUploadPaper.Visible = true;
+        }
+
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+            int srw = sectionsDGV.CurrentCell.RowIndex;
+            int crw = conferencesDGV.CurrentCell.RowIndex;
+
+            int sid = Int32.Parse(sectionsDGV[0, srw].Value.ToString());
+            int cid = Int32.Parse(conferencesDGV[0, crw].Value.ToString());
         }
     }
 }

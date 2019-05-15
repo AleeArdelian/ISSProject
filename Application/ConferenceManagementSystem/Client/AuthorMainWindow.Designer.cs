@@ -38,8 +38,21 @@
             this.btnUpdateInfo = new System.Windows.Forms.Button();
             this.conferencesDGV = new System.Windows.Forms.DataGridView();
             this.sectionsDGV = new System.Windows.Forms.DataGridView();
+            this.absTextBox = new System.Windows.Forms.TextBox();
+            this.contTextBox = new System.Windows.Forms.TextBox();
+            this.contentTextBox = new System.Windows.Forms.Label();
+            this.abstractTextBox = new System.Windows.Forms.Label();
+            this.paperNameTextBox = new System.Windows.Forms.TextBox();
+            this.topicTextBox = new System.Windows.Forms.TextBox();
+            this.paperNameLabel = new System.Windows.Forms.Label();
+            this.topicLabel = new System.Windows.Forms.Label();
+            this.panelUploadPaper = new System.Windows.Forms.Panel();
+            this.btnUpload = new System.Windows.Forms.Button();
+            this.btnSubmit = new System.Windows.Forms.Button();
+            this.infoLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.conferencesDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sectionsDGV)).BeginInit();
+            this.panelUploadPaper.SuspendLayout();
             this.SuspendLayout();
             // 
             // firstNameTextBox
@@ -114,7 +127,7 @@
             // conferencesDGV
             // 
             this.conferencesDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.conferencesDGV.Location = new System.Drawing.Point(463, 12);
+            this.conferencesDGV.Location = new System.Drawing.Point(752, 9);
             this.conferencesDGV.Name = "conferencesDGV";
             this.conferencesDGV.RowTemplate.Height = 24;
             this.conferencesDGV.Size = new System.Drawing.Size(325, 150);
@@ -124,17 +137,131 @@
             // sectionsDGV
             // 
             this.sectionsDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.sectionsDGV.Location = new System.Drawing.Point(463, 168);
+            this.sectionsDGV.Location = new System.Drawing.Point(752, 165);
             this.sectionsDGV.Name = "sectionsDGV";
             this.sectionsDGV.RowTemplate.Height = 24;
             this.sectionsDGV.Size = new System.Drawing.Size(325, 150);
             this.sectionsDGV.TabIndex = 9;
             // 
+            // absTextBox
+            // 
+            this.absTextBox.Location = new System.Drawing.Point(8, 26);
+            this.absTextBox.Multiline = true;
+            this.absTextBox.Name = "absTextBox";
+            this.absTextBox.Size = new System.Drawing.Size(264, 380);
+            this.absTextBox.TabIndex = 10;
+            // 
+            // contTextBox
+            // 
+            this.contTextBox.Location = new System.Drawing.Point(278, 26);
+            this.contTextBox.Multiline = true;
+            this.contTextBox.Name = "contTextBox";
+            this.contTextBox.Size = new System.Drawing.Size(264, 380);
+            this.contTextBox.TabIndex = 11;
+            // 
+            // contentTextBox
+            // 
+            this.contentTextBox.AutoSize = true;
+            this.contentTextBox.Location = new System.Drawing.Point(378, 6);
+            this.contentTextBox.Name = "contentTextBox";
+            this.contentTextBox.Size = new System.Drawing.Size(59, 17);
+            this.contentTextBox.TabIndex = 12;
+            this.contentTextBox.Text = "content:";
+            // 
+            // abstractTextBox
+            // 
+            this.abstractTextBox.AutoSize = true;
+            this.abstractTextBox.Location = new System.Drawing.Point(104, 6);
+            this.abstractTextBox.Name = "abstractTextBox";
+            this.abstractTextBox.Size = new System.Drawing.Size(63, 17);
+            this.abstractTextBox.TabIndex = 13;
+            this.abstractTextBox.Text = "abstract:";
+            // 
+            // paperNameTextBox
+            // 
+            this.paperNameTextBox.Location = new System.Drawing.Point(547, 46);
+            this.paperNameTextBox.Name = "paperNameTextBox";
+            this.paperNameTextBox.Size = new System.Drawing.Size(134, 22);
+            this.paperNameTextBox.TabIndex = 14;
+            // 
+            // topicTextBox
+            // 
+            this.topicTextBox.Location = new System.Drawing.Point(547, 103);
+            this.topicTextBox.Name = "topicTextBox";
+            this.topicTextBox.Size = new System.Drawing.Size(134, 22);
+            this.topicTextBox.TabIndex = 15;
+            // 
+            // paperNameLabel
+            // 
+            this.paperNameLabel.AutoSize = true;
+            this.paperNameLabel.Location = new System.Drawing.Point(570, 26);
+            this.paperNameLabel.Name = "paperNameLabel";
+            this.paperNameLabel.Size = new System.Drawing.Size(88, 17);
+            this.paperNameLabel.TabIndex = 16;
+            this.paperNameLabel.Text = "paper name:";
+            // 
+            // topicLabel
+            // 
+            this.topicLabel.AutoSize = true;
+            this.topicLabel.Location = new System.Drawing.Point(586, 83);
+            this.topicLabel.Name = "topicLabel";
+            this.topicLabel.Size = new System.Drawing.Size(42, 17);
+            this.topicLabel.TabIndex = 17;
+            this.topicLabel.Text = "topic:";
+            // 
+            // panelUploadPaper
+            // 
+            this.panelUploadPaper.Controls.Add(this.btnSubmit);
+            this.panelUploadPaper.Controls.Add(this.contTextBox);
+            this.panelUploadPaper.Controls.Add(this.topicLabel);
+            this.panelUploadPaper.Controls.Add(this.absTextBox);
+            this.panelUploadPaper.Controls.Add(this.paperNameLabel);
+            this.panelUploadPaper.Controls.Add(this.topicTextBox);
+            this.panelUploadPaper.Controls.Add(this.contentTextBox);
+            this.panelUploadPaper.Controls.Add(this.paperNameTextBox);
+            this.panelUploadPaper.Controls.Add(this.abstractTextBox);
+            this.panelUploadPaper.Location = new System.Drawing.Point(12, 157);
+            this.panelUploadPaper.Name = "panelUploadPaper";
+            this.panelUploadPaper.Size = new System.Drawing.Size(694, 418);
+            this.panelUploadPaper.TabIndex = 18;
+            // 
+            // btnUpload
+            // 
+            this.btnUpload.Location = new System.Drawing.Point(119, 118);
+            this.btnUpload.Name = "btnUpload";
+            this.btnUpload.Size = new System.Drawing.Size(109, 33);
+            this.btnUpload.TabIndex = 19;
+            this.btnUpload.Text = "Upload paper";
+            this.btnUpload.UseVisualStyleBackColor = true;
+            this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
+            // 
+            // btnSubmit
+            // 
+            this.btnSubmit.Location = new System.Drawing.Point(558, 131);
+            this.btnSubmit.Name = "btnSubmit";
+            this.btnSubmit.Size = new System.Drawing.Size(100, 33);
+            this.btnSubmit.TabIndex = 20;
+            this.btnSubmit.Text = "Submit";
+            this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
+            // 
+            // infoLabel
+            // 
+            this.infoLabel.AutoSize = true;
+            this.infoLabel.Location = new System.Drawing.Point(211, 9);
+            this.infoLabel.Name = "infoLabel";
+            this.infoLabel.Size = new System.Drawing.Size(495, 17);
+            this.infoLabel.TabIndex = 21;
+            this.infoLabel.Text = "to submit a peper, please select a conference and a section from the 2 tables";
+            // 
             // AuthorMainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1084, 583);
+            this.Controls.Add(this.infoLabel);
+            this.Controls.Add(this.btnUpload);
+            this.Controls.Add(this.panelUploadPaper);
             this.Controls.Add(this.sectionsDGV);
             this.Controls.Add(this.conferencesDGV);
             this.Controls.Add(this.btnUpdateInfo);
@@ -149,6 +276,8 @@
             this.Text = "AuthorMainWindow";
             ((System.ComponentModel.ISupportInitialize)(this.conferencesDGV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sectionsDGV)).EndInit();
+            this.panelUploadPaper.ResumeLayout(false);
+            this.panelUploadPaper.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -166,5 +295,17 @@
         private System.Windows.Forms.Button btnUpdateInfo;
         private System.Windows.Forms.DataGridView conferencesDGV;
         private System.Windows.Forms.DataGridView sectionsDGV;
+        private System.Windows.Forms.TextBox absTextBox;
+        private System.Windows.Forms.TextBox contTextBox;
+        private System.Windows.Forms.Label contentTextBox;
+        private System.Windows.Forms.Label abstractTextBox;
+        private System.Windows.Forms.TextBox paperNameTextBox;
+        private System.Windows.Forms.TextBox topicTextBox;
+        private System.Windows.Forms.Label paperNameLabel;
+        private System.Windows.Forms.Label topicLabel;
+        private System.Windows.Forms.Panel panelUploadPaper;
+        private System.Windows.Forms.Button btnSubmit;
+        private System.Windows.Forms.Button btnUpload;
+        private System.Windows.Forms.Label infoLabel;
     }
 }
