@@ -60,13 +60,25 @@ namespace Server.Service
             throw new NotImplementedException();
         }
 
-        public bool login(string name, string password)
+        public string login(string name, string password)
         {
-            if(athRepo.hasUsernamePassword(name,password) || rmRepo.hasUsernamePassword(name, password) || pcRepo.hasUsernamePassword(name, password) || lstRepo.hasUsernamePassword(name, password))
+            if(athRepo.hasUsernamePassword(name,password))
             {
-                return true;
+                return "Author";
             }
-            return false;
+            else if(rmRepo.hasUsernamePassword(name, password))
+            {
+                return "RegularMember";
+            }
+            else if(pcRepo.hasUsernamePassword(name, password))
+            {
+                return "ChairMember";
+            }
+            else if(lstRepo.hasUsernamePassword(name, password))
+            {
+                return "Listener";
+            }
+            return "FAILED";
         }
 
         public void UpdateAuthor(long CNP, string affiliation)
@@ -164,6 +176,16 @@ namespace Server.Service
             if (athcnp.Contains(email) || rmcnp.Contains(email) || lstcnp.Contains(email) || pcmcnp.Contains(email)) { return false; }
 
             return true;
+        }
+
+        bool IService.login(string name, string password)
+        {
+            throw new NotImplementedException();
+        }
+
+        string IService.validateRegister(string CNP, string username, string email)
+        {
+            throw new NotImplementedException();
         }
     }
 }
