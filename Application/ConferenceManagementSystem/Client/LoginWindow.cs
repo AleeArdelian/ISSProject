@@ -34,6 +34,12 @@ namespace Client
                     mainWindow.ShowDialog();
                     this.Show();
                     break;
+                case "Author":
+                    this.Hide();
+                    AuthorMainWindow mainWindow1 = new AuthorMainWindow(this.service);
+                    mainWindow1.ShowDialog();
+                    this.Show();
+                    break;
                 case "FAILED":
                     MessageBox.Show("Incorrect username or password. Try again.", "Warning", MessageBoxButtons.OK);
                     break;
