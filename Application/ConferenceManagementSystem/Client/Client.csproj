@@ -61,6 +61,12 @@
     <Compile Include="LoginWindow.Designer.cs">
       <DependentUpon>LoginWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="MemberMainWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemberMainWindow.Designer.cs">
+      <DependentUpon>MemberMainWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="RegistrationWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LoginWindow.resx">
       <DependentUpon>LoginWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemberMainWindow.resx">
+      <DependentUpon>MemberMainWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RegistrationWindow.resx">
       <DependentUpon>RegistrationWindow.cs</DependentUpon>
