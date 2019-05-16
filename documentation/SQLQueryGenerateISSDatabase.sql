@@ -2,9 +2,9 @@
 --am schimbat coloanele CNP din bigint in varchar(14)--
 --rulati scriptul apoi modificat in 'App.config' connection string-ul pentru a putea folosi baza de date :)--
 
-CREATE DATABASE [ISS-DB]
+--CREATE DATABASE [ISS-DB]
 
-USE [ISS-DB]
+--USE [ISS-DB]
 
 CREATE TABLE SteeringCommittee(
 	Username varchar(20),
@@ -148,3 +148,5 @@ CREATE TABLE ReevalRequests(
 	PaperID int REFERENCES Papers(PaperID),
 	ReviewerCNP varchar(14) REFERENCES RegularMembers(CNP)
 )
+
+--alter table Papers add isAcceptd bit
