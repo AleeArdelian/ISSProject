@@ -2,7 +2,7 @@
 --am schimbat coloanele CNP din bigint in varchar(14)--
 --rulati scriptul apoi modificat in 'App.config' connection string-ul pentru a putea folosi baza de date :)--
 
-CREATE DATABASE [ISS-DB]
+--CREATE DATABASE [ISS-DB]
 
 USE [ISS-DB]
 

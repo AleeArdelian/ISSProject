@@ -26,12 +26,13 @@ namespace Client
         private void loginButton_Click(object sender, EventArgs e)
         {
             Tuple<String,String> mytuple = service.login(usernameTextBox.Text, passwordTextBox.Text);
+
             switch (mytuple.Item2)
             {
                 case "ChairMember":
                     this.Hide();
-                    ChairMainWindow mainWindow = new ChairMainWindow(this.service);
-                    mainWindow.ShowDialog();
+                    //ChairMainWindow mainWindow = new ChairMainWindow(this.service);
+                    //mainWindow.ShowDialog();
                     this.Show();
                     break;
                 case "Author":
@@ -49,9 +50,20 @@ namespace Client
         private void registerButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            RegistrationWindow regWindow = new RegistrationWindow(this.service);
+            //RegistrationWindow regWindow = new RegistrationWindow(this.service);
+            DropDownRegister regWindow = new DropDownRegister(this.service);
             regWindow.ShowDialog();
             this.Show();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LoginWindow_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

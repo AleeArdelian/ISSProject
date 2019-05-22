@@ -51,25 +51,28 @@
             // 
             // firstNameTextBox
             // 
-            this.firstNameTextBox.Location = new System.Drawing.Point(142, 25);
+            this.firstNameTextBox.Location = new System.Drawing.Point(160, 31);
+            this.firstNameTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.firstNameTextBox.Name = "firstNameTextBox";
-            this.firstNameTextBox.Size = new System.Drawing.Size(192, 22);
+            this.firstNameTextBox.Size = new System.Drawing.Size(216, 26);
             this.firstNameTextBox.TabIndex = 0;
+            this.firstNameTextBox.TextChanged += new System.EventHandler(this.firstNameTextBox_TextChanged);
             // 
             // firstNameLabel
             // 
             this.firstNameLabel.AutoSize = true;
-            this.firstNameLabel.Location = new System.Drawing.Point(19, 28);
+            this.firstNameLabel.Location = new System.Drawing.Point(21, 35);
             this.firstNameLabel.Name = "firstNameLabel";
-            this.firstNameLabel.Size = new System.Drawing.Size(78, 17);
+            this.firstNameLabel.Size = new System.Drawing.Size(88, 20);
             this.firstNameLabel.TabIndex = 1;
             this.firstNameLabel.Text = "First name:";
             // 
             // registerButton
             // 
-            this.registerButton.Location = new System.Drawing.Point(124, 373);
+            this.registerButton.Location = new System.Drawing.Point(140, 466);
+            this.registerButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.registerButton.Name = "registerButton";
-            this.registerButton.Size = new System.Drawing.Size(75, 29);
+            this.registerButton.Size = new System.Drawing.Size(84, 36);
             this.registerButton.TabIndex = 2;
             this.registerButton.Text = "Register";
             this.registerButton.UseVisualStyleBackColor = true;
@@ -78,138 +81,146 @@
             // lastNameLabel
             // 
             this.lastNameLabel.AutoSize = true;
-            this.lastNameLabel.Location = new System.Drawing.Point(19, 65);
+            this.lastNameLabel.Location = new System.Drawing.Point(21, 81);
             this.lastNameLabel.Name = "lastNameLabel";
-            this.lastNameLabel.Size = new System.Drawing.Size(78, 17);
+            this.lastNameLabel.Size = new System.Drawing.Size(88, 20);
             this.lastNameLabel.TabIndex = 4;
             this.lastNameLabel.Text = "Last name:";
             // 
             // lastNameTextBox
             // 
-            this.lastNameTextBox.Location = new System.Drawing.Point(142, 62);
+            this.lastNameTextBox.Location = new System.Drawing.Point(160, 78);
+            this.lastNameTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lastNameTextBox.Name = "lastNameTextBox";
-            this.lastNameTextBox.Size = new System.Drawing.Size(192, 22);
+            this.lastNameTextBox.Size = new System.Drawing.Size(216, 26);
             this.lastNameTextBox.TabIndex = 3;
             // 
             // cnpLabel
             // 
             this.cnpLabel.AutoSize = true;
-            this.cnpLabel.Location = new System.Drawing.Point(19, 104);
+            this.cnpLabel.Location = new System.Drawing.Point(21, 130);
             this.cnpLabel.Name = "cnpLabel";
-            this.cnpLabel.Size = new System.Drawing.Size(40, 17);
+            this.cnpLabel.Size = new System.Drawing.Size(45, 20);
             this.cnpLabel.TabIndex = 6;
             this.cnpLabel.Text = "CNP:";
             // 
             // cnpTextBox
             // 
-            this.cnpTextBox.Location = new System.Drawing.Point(142, 101);
+            this.cnpTextBox.Location = new System.Drawing.Point(160, 126);
+            this.cnpTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cnpTextBox.Name = "cnpTextBox";
-            this.cnpTextBox.Size = new System.Drawing.Size(192, 22);
+            this.cnpTextBox.Size = new System.Drawing.Size(216, 26);
             this.cnpTextBox.TabIndex = 5;
             // 
             // emailLabel
             // 
             this.emailLabel.AutoSize = true;
-            this.emailLabel.Location = new System.Drawing.Point(19, 199);
+            this.emailLabel.Location = new System.Drawing.Point(21, 252);
             this.emailLabel.Name = "emailLabel";
-            this.emailLabel.Size = new System.Drawing.Size(46, 17);
+            this.emailLabel.Size = new System.Drawing.Size(52, 20);
             this.emailLabel.TabIndex = 8;
             this.emailLabel.Text = "Email:";
             // 
             // emailTextBox
             // 
-            this.emailTextBox.Location = new System.Drawing.Point(142, 196);
+            this.emailTextBox.Location = new System.Drawing.Point(160, 249);
+            this.emailTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.emailTextBox.Name = "emailTextBox";
-            this.emailTextBox.Size = new System.Drawing.Size(192, 22);
+            this.emailTextBox.Size = new System.Drawing.Size(216, 26);
             this.emailTextBox.TabIndex = 7;
             // 
             // usernameLabel
             // 
             this.usernameLabel.AutoSize = true;
-            this.usernameLabel.Location = new System.Drawing.Point(19, 238);
+            this.usernameLabel.Location = new System.Drawing.Point(21, 298);
             this.usernameLabel.Name = "usernameLabel";
-            this.usernameLabel.Size = new System.Drawing.Size(77, 17);
+            this.usernameLabel.Size = new System.Drawing.Size(87, 20);
             this.usernameLabel.TabIndex = 10;
             this.usernameLabel.Text = "Username:";
             // 
             // usernameTextBox
             // 
-            this.usernameTextBox.Location = new System.Drawing.Point(142, 235);
+            this.usernameTextBox.Location = new System.Drawing.Point(160, 294);
+            this.usernameTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.usernameTextBox.Name = "usernameTextBox";
-            this.usernameTextBox.Size = new System.Drawing.Size(192, 22);
+            this.usernameTextBox.Size = new System.Drawing.Size(216, 26);
             this.usernameTextBox.TabIndex = 9;
             // 
             // passwordLabel
             // 
             this.passwordLabel.AutoSize = true;
-            this.passwordLabel.Location = new System.Drawing.Point(19, 277);
+            this.passwordLabel.Location = new System.Drawing.Point(21, 346);
             this.passwordLabel.Name = "passwordLabel";
-            this.passwordLabel.Size = new System.Drawing.Size(73, 17);
+            this.passwordLabel.Size = new System.Drawing.Size(82, 20);
             this.passwordLabel.TabIndex = 10;
             this.passwordLabel.Text = "Password:";
             // 
             // retypePasswordLabel
             // 
             this.retypePasswordLabel.AutoSize = true;
-            this.retypePasswordLabel.Location = new System.Drawing.Point(19, 316);
+            this.retypePasswordLabel.Location = new System.Drawing.Point(21, 395);
             this.retypePasswordLabel.Name = "retypePasswordLabel";
-            this.retypePasswordLabel.Size = new System.Drawing.Size(117, 17);
+            this.retypePasswordLabel.Size = new System.Drawing.Size(132, 20);
             this.retypePasswordLabel.TabIndex = 12;
             this.retypePasswordLabel.Text = "Retype password";
             // 
             // retypePasswordTextBox
             // 
-            this.retypePasswordTextBox.Location = new System.Drawing.Point(142, 313);
+            this.retypePasswordTextBox.Location = new System.Drawing.Point(160, 391);
+            this.retypePasswordTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.retypePasswordTextBox.Name = "retypePasswordTextBox";
             this.retypePasswordTextBox.PasswordChar = '*';
-            this.retypePasswordTextBox.Size = new System.Drawing.Size(192, 22);
+            this.retypePasswordTextBox.Size = new System.Drawing.Size(216, 26);
             this.retypePasswordTextBox.TabIndex = 11;
             // 
             // passwordTextBox
             // 
-            this.passwordTextBox.Location = new System.Drawing.Point(142, 274);
+            this.passwordTextBox.Location = new System.Drawing.Point(160, 342);
+            this.passwordTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.PasswordChar = '*';
-            this.passwordTextBox.Size = new System.Drawing.Size(192, 22);
+            this.passwordTextBox.Size = new System.Drawing.Size(216, 26);
             this.passwordTextBox.TabIndex = 9;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(19, 171);
+            this.label1.Location = new System.Drawing.Point(21, 211);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 17);
+            this.label1.Size = new System.Drawing.Size(71, 20);
             this.label1.TabIndex = 16;
             this.label1.Text = "Website:";
             // 
             // WebsiteTextBox
             // 
-            this.WebsiteTextBox.Location = new System.Drawing.Point(142, 166);
+            this.WebsiteTextBox.Location = new System.Drawing.Point(160, 208);
+            this.WebsiteTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.WebsiteTextBox.Name = "WebsiteTextBox";
-            this.WebsiteTextBox.Size = new System.Drawing.Size(192, 22);
+            this.WebsiteTextBox.Size = new System.Drawing.Size(216, 26);
             this.WebsiteTextBox.TabIndex = 15;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(19, 134);
+            this.label2.Location = new System.Drawing.Point(21, 168);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 17);
+            this.label2.Size = new System.Drawing.Size(78, 20);
             this.label2.TabIndex = 14;
             this.label2.Text = "Affiliation:";
             // 
             // AffiliationTextBox
             // 
-            this.AffiliationTextBox.Location = new System.Drawing.Point(142, 134);
+            this.AffiliationTextBox.Location = new System.Drawing.Point(160, 168);
+            this.AffiliationTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.AffiliationTextBox.Name = "AffiliationTextBox";
-            this.AffiliationTextBox.Size = new System.Drawing.Size(192, 22);
+            this.AffiliationTextBox.Size = new System.Drawing.Size(216, 26);
             this.AffiliationTextBox.TabIndex = 13;
             // 
             // RegistrationWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(369, 449);
+            this.ClientSize = new System.Drawing.Size(415, 561);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.WebsiteTextBox);
             this.Controls.Add(this.label2);
@@ -229,6 +240,7 @@
             this.Controls.Add(this.registerButton);
             this.Controls.Add(this.firstNameLabel);
             this.Controls.Add(this.firstNameTextBox);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "RegistrationWindow";
             this.Text = "Register";
             this.ResumeLayout(false);

@@ -110,7 +110,7 @@ namespace Server.Service
             throw new NotImplementedException();
         }
 
-        public bool register(string firstName, string lastName, string CNP, string affiliation, string website, string email, string username, string password)
+        public bool registerMember(string firstName, string lastName, string CNP, string affiliation, string website, string email, string username, string password)
         {
             if (!validateRegister(CNP, username, email)) return false;
             List<ChosenPCMember> allmemb = cpcRepo.FindAll();
@@ -141,23 +141,25 @@ namespace Server.Service
                 }
                 return ok;
             }
-            else
-            {
-                if (affiliation != "")
-                {
-                    Author ath = new Author(CNP, affiliation);
-                    ath.setEmail(email); ath.setFirstName(firstName); ath.setLastName(lastName); ath.setPassword(password); ath.setUsername(username);
-                    athRepo.Add(ath);
-                }
-                else
-                {
-                    Listener lst = new Listener(CNP);
-                    lst.setEmail(email); lst.setFirstName(firstName); lst.setLastName(lastName); lst.setPassword(password); lst.setUsername(username);
-                    lstRepo.Add(lst);
-                }
+            return ok;
+        }
 
-                return !ok;
-            }
+        public bool registerAuthor(string firstName, string lastName, string CNP, string affiliation, string email, string username, string password)
+        {
+            if (!validateRegister(CNP, username, email)) return false;
+            Author ath = new Author(CNP, affiliation);
+            ath.setEmail(email); ath.setFirstName(firstName); ath.setLastName(lastName); ath.setPassword(password); ath.setUsername(username);
+            athRepo.Add(ath);
+            return true;
+        }
+
+        public bool registerListener(string firstName, string lastName, string CNP, string email, string username, string password)
+        {
+            if (!validateRegister(CNP, username, email)) return false;
+            Listener lst = new Listener(CNP);
+            lst.setEmail(email); lst.setFirstName(firstName); lst.setLastName(lastName); lst.setPassword(password); lst.setUsername(username);
+            lstRepo.Add(lst);
+            return true;
         }
 
         public bool validateRegister(string CNP, string username, string email)

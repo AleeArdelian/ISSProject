@@ -11,19 +11,19 @@ using System.Windows.Forms;
 
 namespace Client
 {
-    public partial class RegistrationWindow : Form
+    public partial class ListenerRegisterWindow : Form
     {
-        private IService service;
+        IService service;
 
-        public RegistrationWindow(IService service)
+        public ListenerRegisterWindow(IService service)
         {
-            this.service = service;
             InitializeComponent();
+            this.service = service;
         }
 
-        private void registerButton_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            if (service.registerMember(firstNameTextBox.Text, lastNameTextBox.Text, cnpTextBox.Text, AffiliationTextBox.Text, WebsiteTextBox.Text, emailTextBox.Text, usernameTextBox.Text, passwordTextBox.Text))
+            if (service.registerListener(firstNametextbox.Text, lastNameTextbox.Text, cnpTextbox.Text, emailTextbox.Text, usernameTextbox.Text, passwordTextbox.Text))
             {
                 MessageBox.Show("register successful");
                 this.Close();
@@ -32,11 +32,6 @@ namespace Client
             {
                 MessageBox.Show("register failed");
             }
-        }
-
-        private void firstNameTextBox_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

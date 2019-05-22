@@ -53,6 +53,24 @@
     <Compile Include="AuthorMainWindow.Designer.cs">
       <DependentUpon>AuthorMainWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="AuthorRegisterWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuthorRegisterWindow.Designer.cs">
+      <DependentUpon>AuthorRegisterWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DropDownRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DropDownRegister.Designer.cs">
+      <DependentUpon>DropDownRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListenerRegisterWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListenerRegisterWindow.Designer.cs">
+      <DependentUpon>ListenerRegisterWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,25 +83,25 @@
     <Compile Include="RegistrationWindow.Designer.cs">
       <DependentUpon>RegistrationWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="ChairMainWindow.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ChairMainWindow.Designer.cs">
-      <DependentUpon>ChairMainWindow.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AuthorMainWindow.resx">
       <DependentUpon>AuthorMainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AuthorRegisterWindow.resx">
+      <DependentUpon>AuthorRegisterWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DropDownRegister.resx">
+      <DependentUpon>DropDownRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListenerRegisterWindow.resx">
+      <DependentUpon>ListenerRegisterWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginWindow.resx">
       <DependentUpon>LoginWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RegistrationWindow.resx">
       <DependentUpon>RegistrationWindow.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ChairMainWindow.resx">
-      <DependentUpon>ChairMainWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -105,7 +123,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Common\Common.csproj">
