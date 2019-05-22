@@ -102,6 +102,11 @@ namespace Server.Service
             athRepo.Update(CNP, firstName, lastName);
         }
 
+        public void UpdateRegularMember(string CNP, string firstName, string lastName, string affiliation)
+        {
+            rmRepo.Update(CNP, firstName, lastName, affiliation);
+        }
+
         public void UpdateListener(string CNP)
         {
             throw new NotImplementedException();
@@ -193,7 +198,5 @@ namespace Server.Service
 
             return true;
         }
-
-        
     }
 }

@@ -71,6 +71,14 @@ namespace Server.Repository
             throw new NotImplementedException();
         }
 
+        public void Update(String CNP, String firstName, String lastName, String affiliation)
+        {
+            using (IDbConnection db = new SqlConnection(ConfigurationManager.ConnectionStrings["cmsDatabase"].ConnectionString))
+            {
+                db.Query<String>("UPDATE RegularMembers SET FirstName='" + firstName + "', LastName='" + lastName + "', Affiliation='" + affiliation +"' WHERE CNP='" + CNP + "'").ToList();
+            }
+        }
+
         public void Update(RegularMember entity)
         {
             throw new NotImplementedException();

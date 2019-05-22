@@ -29,6 +29,7 @@ namespace Common.Service
         void UpdateParticipant(string Username, string Password, string FirstName, string LastName, string Email);
         void UpdatePcMember(string CNP, string Affiliation, string Website);
         void UpdateSpeaker(string CNP, string affiliation, string username, string password, string firstName, string lastName, string email);
+        void UpdateRegularMember(string CNP, string firstName, string lastName, string affiliation);
 
         List<Listener> FindAllListeners();
 
