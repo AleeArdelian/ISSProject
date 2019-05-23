@@ -63,6 +63,7 @@
     <Compile Include="Repository\PcMemberRepository.cs" />
     <Compile Include="Repository\RegularMemberRepository.cs" />
     <Compile Include="Repository\ReviewerRepository.cs" />
+    <Compile Include="Repository\ReviewRepository.cs" />
     <Compile Include="Repository\SpeakerRepository.cs" />
     <Compile Include="Service\CMSService.cs" />
   </ItemGroup>

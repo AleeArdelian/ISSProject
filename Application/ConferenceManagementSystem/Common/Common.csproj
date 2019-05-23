@@ -50,6 +50,7 @@
     <Compile Include="Domain\Participant.cs" />
     <Compile Include="Domain\PcMember.cs" />
     <Compile Include="Domain\RegularMember.cs" />
+    <Compile Include="Domain\Review.cs" />
     <Compile Include="Domain\Reviewer.cs" />
     <Compile Include="Domain\Speaker.cs" />
     <Compile Include="Domain\Validators\AuthorValidator.cs" />

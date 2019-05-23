@@ -20,6 +20,7 @@ namespace Common.Service
         void AddSpeaker(string CNP, string affiliation, string username, string password, string firstName, string lastName, string email);
 
         void AddPaper(string Content, string Abstract, string PaperName, string Topic, int SectionID);
+        void AddReview(string Qualifier, string Comments, string ReviewerCNP, int PaperID);
         int FindMaxPaperID();
 
         //void RemoveListener()

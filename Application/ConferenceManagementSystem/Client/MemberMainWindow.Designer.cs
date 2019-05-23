@@ -310,6 +310,7 @@
             this.btnSubmitReview.TabIndex = 3;
             this.btnSubmitReview.Text = "Submit Review";
             this.btnSubmitReview.UseVisualStyleBackColor = true;
+            this.btnSubmitReview.Click += new System.EventHandler(this.btnSubmitReview_Click);
             // 
             // labelComments
             // 

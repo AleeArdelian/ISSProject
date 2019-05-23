@@ -18,6 +18,7 @@ namespace Server.Service
         AuthorRepository athRepo = new AuthorRepository();
         ListenerRepository lstRepo = new ListenerRepository();
         PaperRepository pprRepo = new PaperRepository();
+        ReviewRepository rvRepo = new ReviewRepository();
 
         public void AddConference(int ConferenceId, string ConferenceName)
         {
@@ -60,6 +61,13 @@ namespace Server.Service
             RegularMember rm = new RegularMember(CNP, Affiliation, Website);
             rm.setEmail(email); rm.setFirstName(FirstName); rm.setLastName(LastName); rm.setUsername(Username); rm.setPassword(Password);
             rmRepo.Add(rm);
+        }
+
+        public void AddReview(string Qualifier, string Comments, string ReviewerCNP, int PaperID)
+        {
+            Review rv = new Review(Qualifier, Comments, ReviewerCNP, PaperID);
+            rv.setPaperID(PaperID); rv.setReviewerCNP(ReviewerCNP); rv.setQualifier(Qualifier); rv.setComments(Comments);
+            rvRepo.Add(rv);
         }
 
         public void AddSpeaker(string CNP, string affiliation, string username, string password, string firstName, string lastName, string email)

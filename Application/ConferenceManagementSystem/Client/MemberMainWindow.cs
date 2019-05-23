@@ -44,14 +44,16 @@ namespace Client
                 sectionsDGV.DataSource = tbl1;
                 conferencesDGV.Columns["ConferenceID"].Visible = false;
                 sectionsDGV.Columns["SectionID"].Visible = false; sectionsDGV.Columns["SectionChairCNP"].Visible = false;
-                SqlDataAdapter dta2 = new SqlDataAdapter("SELECT P.PaperName, P.Abstract, P.Content, P.Topic FROM Papers P INNER JOIN AuthorPapers AP ON P.PaperID=AP.PaperID WHERE AP.AuthorCNP!="+this.cnp, dbCon);
+                SqlDataAdapter dta2 = new SqlDataAdapter("SELECT P.PaperID, P.PaperName, P.Abstract, P.Content, P.Topic FROM Papers P INNER JOIN AuthorPapers AP ON P.PaperID=AP.PaperID WHERE AP.AuthorCNP!="+this.cnp, dbCon);
                 DataTable tbl2 = new DataTable();
                 dta2.Fill(tbl2);
                 papersDGV.DataSource = tbl2;
-                SqlDataAdapter dta3 = new SqlDataAdapter("SELECT P.PaperName, P.Abstract, P.Content, P.Topic FROM Papers P INNER JOIN AuthorPapers AP ON P.PaperID=AP.PaperID WHERE AP.AuthorCNP=" + this.cnp, dbCon);
+                SqlDataAdapter dta3 = new SqlDataAdapter("SELECT P.PaperID, P.PaperName, P.Abstract, P.Content, P.Topic FROM Papers P INNER JOIN AuthorPapers AP ON P.PaperID=AP.PaperID WHERE AP.AuthorCNP=" + this.cnp, dbCon);
                 DataTable tbl3 = new DataTable();
                 dta3.Fill(tbl3);
                 yourPapersDGV.DataSource = tbl3;
+                papersDGV.Columns["PaperID"].Visible = false;
+                yourPapersDGV.Columns["PaperID"].Visible = false;
                 dbCon.Close();
             }
         }
@@ -122,6 +124,19 @@ namespace Client
             dbCon.Open(); cmd1.ExecuteNonQuery(); dbCon.Close();
             populateDGVS();
         }
-        
+
+        private void btnSubmitReview_Click(object sender, EventArgs e)
+        {
+            string qual = comboBoxQualifier.Text.ToString();
+            string comm = commentsTextBox.Text.ToString();
+            int pcc = papersDGV.CurrentCell.RowIndex;
+            int pid = Int32.Parse(papersDGV[0, pcc].Value.ToString());
+
+            service.AddReview(qual, comm, this.cnp, pid);
+
+            SqlConnection dbCon = new SqlConnection(ConfigurationManager.ConnectionStrings["cmsDatabase"].ConnectionString);
+            SqlCommand cmd = new SqlCommand("UPDATE RegularMembers SET isReviewer=1 WHERE CNP='"+this.cnp+"'", dbCon);
+            dbCon.Open(); cmd.ExecuteNonQuery(); dbCon.Close();
+        }
     }
 }
