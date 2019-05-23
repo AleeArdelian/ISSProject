@@ -21,6 +21,7 @@ CREATE TABLE Abstracts(
 CREATE TABLE Sections(
 	SectionID int PRIMARY KEY IDENTITY(1,1),
 	SectionChairCNP varchar(14),
+	SectionName varchar(20), 
 	Room varchar(10)
 )
 

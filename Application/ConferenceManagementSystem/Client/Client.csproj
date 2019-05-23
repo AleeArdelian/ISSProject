@@ -55,6 +55,12 @@
     <Compile Include="AuthorMainWindow.Designer.cs">
       <DependentUpon>AuthorMainWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListenerMainWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListenerMainWindow.Designer.cs">
+      <DependentUpon>ListenerMainWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +83,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AuthorMainWindow.resx">
       <DependentUpon>AuthorMainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListenerMainWindow.resx">
+      <DependentUpon>ListenerMainWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginWindow.resx">
       <DependentUpon>LoginWindow.cs</DependentUpon>

@@ -40,6 +40,12 @@ namespace Client
                     mainWindow1.ShowDialog();
                     this.Show();
                     break;
+                case "Listener":
+                    this.Hide();
+                    ListenerMainWindow mainWindow2 = new ListenerMainWindow(this.service, mytuple.Item1);
+                    mainWindow2.ShowDialog();
+                    this.Show();
+                    break;
                 case "FAILED":
                     MessageBox.Show("Incorrect username or password. Try again.", "Warning", MessageBoxButtons.OK);
                     break;
